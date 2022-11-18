@@ -194,4 +194,4 @@ gantt
 layout: quote
 ---
 
-# "Thanks for your attention!"
+# "Thanks for your listening!"
