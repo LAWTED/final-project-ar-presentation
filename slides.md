@@ -130,13 +130,15 @@ third part is tracking, the cloud should track the light, and i do a lot of rese
 -->
 
 ---
-
+layout: two-cols
+---
 # Audio Technology Selection
 
 * Audioworklet
-* [Live Demo](https://github.com/goblin-laboratory/volume-meter)
 
-<img src="/audio.png" class="rounded w-70 object-cover"/>
+::right::
+
+<iframe src="https://goblin-laboratory.github.io/volume-meter/" class="rounded w-full h-full object-cover" allow='microphone;camera;midi;encrypted-media;'></iframe>
 
 <!--
 fourth is audio technology, i will use audioworklet for tracing the volume, it is common that many online meeting has this feature, u speak and u can see the voulme from your micphone that is base on the audioworklet
@@ -150,6 +152,8 @@ fourth is audio technology, i will use audioworklet for tracing the volume, it i
 <br/>
 
 AR.js + blender <LogosBlender/> + three.js <LogosThreejs/> + tracking.js + webRTC <LogosWebrtc/>
+
+<br/>
 
 Ar.js for AR content
 
@@ -169,9 +173,13 @@ now let me make a summary, i am going to build a webpage which can run on any br
 
 # Timeline
 
+<br/>
+<br/>
+<br/>
+
 ```mermaid
 gantt
-    title A Gantt Diagram
+    title Final Project AR Timeline
     dateFormat  YYYY-MM-DD
     section Background
     Study AR technologies in web domain :a1, 2022-11-01, 45d
@@ -189,6 +197,7 @@ gantt
     Deploy the website :d1, 2023-03-01, 45d
     CDN optimize :d2, 2023-03-15, 15d
 ```
+
 
 ---
 layout: quote
