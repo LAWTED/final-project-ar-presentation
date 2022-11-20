@@ -175,7 +175,6 @@ now let me make a summary, i am going to build a webpage which can run on any br
 
 <br/>
 <br/>
-<br/>
 
 ```mermaid
 gantt
@@ -190,23 +189,25 @@ gantt
 
 
     section Cloud
-    Modeling a cloud :b1, 2022-12-16, 75d
-    Deploy the cloud into web page     :b1, 2023-01-01  , 45d
-    Track the light from camera :b3, 2023-01-01 , 60d
+    Modeling a cloud :b1, 2022-12-01, 90d
+    Deploy the cloud into web page     :b1, 2022-12-01  , 90d
+    Track the video from camera :b3, 2022-12-16 , 75d
+    Bind the state :b4, 2023-01-01, 60d
     Cloud page :milestone, 2023-01-16, 0d
 
     section Animal
-    Modeling a animal :c1, 2022-12-16, 60d
-    Deploy the cloud into web page     :c1, 2023-02-16  , 45d
-    Track the light from camera :c3, 2023-02-01 , 60d
-    Animal page :milestone, 2023-2-16, 0d
+    Modeling a animal :c1, 2023-01-16, 75d
+    Deploy the cloud into web page     :c1, 2023-02-01  , 59d
+    Track the light from camera :c3, 2023-02-01 , 59d
+    Voice detection :c4, 2023-01-16, 75d
+    Animal page :milestone, 2023-3-01, 0d
 
     section Deploy
-    Deploy the website :d1, 2023-03-01, 45d
+    Deploy the website :d1, 2022-12-01, 150d
     CDN optimize :d2, 2023-03-15, 15d
     Generate user guide :d3, 2023-02-16, 75d
     Make a demo video :d4, 2023-04-01, 30d
-    Full page :milestone, 2023-03-15, 0d
+    Full page :milestone, 2023-03-20, 0d
 
     section Feedback
     feedback round 1 :e1, 2022-12-16, 15d
