@@ -239,7 +239,7 @@ layout: two-cols
 ::right::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/cloud_computer.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+  <video src="/cloud_computer.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
 <!--
@@ -263,6 +263,7 @@ i download the cloud model and it looks great in the modeling software
 ---
 layout: two-cols
 ---
+
 # AR.js to position the cloud
 
 * hiro marker is used to position the cloud
@@ -293,13 +294,12 @@ layout: two-cols
 </div>
 
 <!--
-second part is track by ar.js
+second part is track by ar.js, here is part of the code we export the cloud to gltf format and use a-marker to position it
 -->
 
 ---
 layout: two-cols
 ---
-
 
 # deploy the page
 
@@ -330,6 +330,11 @@ server {
 <div class="w-full h-full flex justify-center items-center">
   <img src="/cloud_phone.jpg" class="rounded w-1/2 object-cover"/>
 </div>
+
+<!--
+final part is deploy the page, now its on my website and because if the website need to control the camera it should be cetificate by ssl and deploy as a https website
+-->
+
 ---
 layout: bullets
 ---
@@ -340,6 +345,11 @@ layout: bullets
 
 * use track.js to track the light and make the cloud change its color
 
+<!--
+add more status of cloud, such as clouds in morning and afternoon and eve
+
+second thing is use track.js to track the color change in the video.
+-->
 
 ---
 layout: quote
