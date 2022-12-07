@@ -87,6 +87,8 @@ third part is about the stacks and the technology section
 -->
 
 ---
+layout: bullets
+---
 
 # AR SDK Technology Selection
 
@@ -100,7 +102,8 @@ first thing first, how to find the write ar sdk techonology which is Suitable fo
 -->
 
 ---
-
+layout: bullets
+---
 # Modeling Technology Selection
 
 * blender <LogosBlender/>
@@ -108,12 +111,14 @@ first thing first, how to find the write ar sdk techonology which is Suitable fo
 <br/>
 <br/>
 
-<img src="https://i.all3dp.com/wp-content/uploads/2022/01/31151522/3d-print-with-blender-aftab-ali-via-all3dp-220114.jpg" class="rounded w-150 h-80 object-cover"/>
+<img src="https://i.all3dp.com/wp-content/uploads/2022/01/31151522/3d-print-with-blender-aftab-ali-via-all3dp-220114.jpg" class="rounded w-120 object-cover"/>
 
 <!--
 second one is modeling, i choose blender definitely, because i used it before and i think its the best modeling software for small model
 -->
 
+---
+layout: bullets
 ---
 
 # Tracking Technology Selection
@@ -123,7 +128,7 @@ second one is modeling, i choose blender definitely, because i used it before an
 <br/>
 <br/>
 
-<img src="/tracking.png" class="rounded w-150 h-80 object-cover"/>
+<img src="/tracking.png" class="rounded w-120 object-cover"/>
 
 <!--
 third part is tracking, the cloud should track the light, and i do a lot of reseach, the light should change its color instead of change its intensity. first, not every phone has a ambient light sensor, second AR requires stable light intensity for positioning, hence here i will use tracking.js to track the colors from the camera. u can see it can circle the colors of yellow and purple
@@ -145,7 +150,8 @@ fourth is audio technology, i will use audioworklet for tracing the volume, it i
 -->
 
 ---
-
+layout: bullets
+---
 # Final stack section
 
 <br/>
@@ -173,8 +179,6 @@ now let me make a summary, i am going to build a webpage which can run on any br
 
 # Timeline
 
-<br/>
-<br/>
 
 ```mermaid
 gantt
@@ -216,6 +220,85 @@ gantt
     feedback round 4 :e2, 2023-03-16, 15d
 
 ```
+---
+layout: section
+---
+
+# 12/07 Demo 🧑‍💻
+
+---
+layout: two-cols
+---
+
+# Cloud 🌩️
+
+* link: [cloud.lawted.tech](https://cloud.lawted.tech)
+* track HIRO marker
+
+
+<img src="/hiro.jpg" class="w-80 h-80 object-cover ">
+
+::right::
+
+<div class="w-full h-full flex justify-center items-center">
+  <video src="/cloud_computer.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+</div>
+
+---
+layout: bullets
+---
+
+# Blend the cloud model
+
+* [cloud.blend](https://sketchfab.com/3d-models/cloud-3a76eb255e3c4c0199bbfedb2b54342f)
+
+<br/>
+
+<img src="/cloud_blender.jpg" class="rounded w-120 object-cover"/>
+
+
+
+
+
+
+---
+layout: bullets
+---
+
+# Use AR.js to position the cloud
+
+* hiro marker is used to position the cloud
+
+
+<img src="/corner.jpg" class="rounded w-120 object-cover"/>
+
+
+---
+layout: two-cols
+---
+
+
+# Deploy the page and add ssl
+
+* use tencent cloud server to deploy the page
+* use nginx to add ssl
+* enable to use on phone and computer in browser
+
+::right::
+
+
+<div class="w-full h-full flex justify-center items-center">
+  <img src="/cloud_phone.jpg" class="rounded w-1/2 object-cover"/>
+</div>
+---
+layout: bullets
+---
+
+# Next step improvement
+
+* add more cloud models and make them move
+
+* use track.js to track the light and make the cloud change its color
 
 
 ---
