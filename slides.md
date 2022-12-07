@@ -87,8 +87,6 @@ third part is about the stacks and the technology section
 -->
 
 ---
-layout: bullets
----
 
 # AR SDK Technology Selection
 
@@ -102,8 +100,7 @@ first thing first, how to find the write ar sdk techonology which is Suitable fo
 -->
 
 ---
-layout: bullets
----
+
 # Modeling Technology Selection
 
 * blender <LogosBlender/>
@@ -117,8 +114,6 @@ layout: bullets
 second one is modeling, i choose blender definitely, because i used it before and i think its the best modeling software for small model
 -->
 
----
-layout: bullets
 ---
 
 # Tracking Technology Selection
@@ -150,8 +145,7 @@ fourth is audio technology, i will use audioworklet for tracing the volume, it i
 -->
 
 ---
-layout: bullets
----
+
 # Final stack section
 
 <br/>
@@ -226,6 +220,10 @@ layout: section
 
 # 12/07 Demo 🧑‍💻
 
+<!--
+OK, i am gonna tell u my current progress and follow-up plans, because my project is a engineer instead of a research hence let's just forward to the result.
+-->
+
 ---
 layout: two-cols
 ---
@@ -244,8 +242,10 @@ layout: two-cols
   <video src="/cloud_computer.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
----
-layout: bullets
+<!--
+take a look at the video on the left, this is a screenshoot on my phone and u can see the cloud is stick on the hiro marker. and when we walk to another direction the cloud won't rotate but show another aspect
+-->
+
 ---
 
 # Blend the cloud model
@@ -256,33 +256,73 @@ layout: bullets
 
 <img src="/cloud_blender.jpg" class="rounded w-120 object-cover"/>
 
-
-
-
-
+<!--
+i download the cloud model and it looks great in the modeling software
+-->
 
 ---
-layout: bullets
+layout: two-cols
 ---
-
-# Use AR.js to position the cloud
+# AR.js to position the cloud
 
 * hiro marker is used to position the cloud
 
+<br/>
+<br/>
 
-<img src="/corner.jpg" class="rounded w-120 object-cover"/>
+```html {8|4-9|all}
+<!-- main code -->
+...
+    <a-scene embedded arjs>
+    <a-marker preset="hiro">
+        <a-entity
+        position="-0.5 1.5 0"
+        scale="0.3 0.3 0.3"
+        gltf-model="/cloud.gltf"
+        ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+    </a-scene>
+...
+```
 
+::right::
+
+<div class="w-full h-full flex justify-center items-center">
+  <img src="/corner.png" class="rounded w-9/10 object-cover"/>
+</div>
+
+<!--
+second part is track by ar.js
+-->
 
 ---
 layout: two-cols
 ---
 
 
-# Deploy the page and add ssl
+# deploy the page
 
 * use tencent cloud server to deploy the page
-* use nginx to add ssl
+* use nginx to add ssl certificate
 * enable to use on phone and computer in browser
+
+```nginx
+server {
+    listen 443 ssl;
+    server_name cloud.lawted.tech;
+    ssl_certificate /etc/nginx/ssl/cloud.lawted.tech/fullchain.cer;
+    ssl_certificate_key /etc/nginx/ssl/cloud.lawted.tech/cloud.lawted.tech.key;
+    ssl_session_timeout 5m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+    ssl_prefer_server_ciphers on;
+    location / {
+        root /var/www/cloud;
+        index index.html index.htm;
+    }
+}
+```
 
 ::right::
 
