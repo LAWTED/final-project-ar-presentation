@@ -352,6 +352,286 @@ second thing is use track.js to track the color change in the video.
 -->
 
 ---
+layout: section
+---
+# Early-term Progress Report 🐦
+
+---
+layout: two-cols
+---
+
+# Overview
+
+> successfully deployed a cloud page that is able to track the hiro marker and change the color of the cloud based on the sky color.
+
+
+* ✅ Deploy on the website
+* ✅ Model cloud track the hiro marker
+* ✅ Sky color detection
+* ✅ Cloud color change based on the sky color
+
+
+::right::
+
+<div class="w-full h-full flex justify-center items-center">
+  <video src="/early-progress-report-overview.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+</div>
+
+---
+layout: section
+---
+
+# Challenges
+
+
+---
+layout: two-cols
+---
+
+## tracking.js track preset color
+
+```mermaid
+graph TD
+    A(View) -->|Get main color| B(Main color)
+    B -->|track preset color| C(Know state when color find)
+```
+
+::right::
+
+## Sky color detection
+
+```mermaid
+graph TD
+    E(View) -->|Sky part filter| A(Sky View) -->|Get main color intime| B(Sky main color)
+    B -->|set main color to cloud| C(Cloud color)
+```
+
+
+---
+layout: two-cols
+---
+
+# Tracking.js in detecting weather
+
+> use tracking.js to track some color but it's not accurate enough, and hard to tell the difference
+
+tracking.js can track
+
+* similar color 🟡
+* color position ❌
+
+But what we need
+
+* tracking specific color 🔵
+
+
+:: right ::
+
+<div class="w-full h-full flex justify-center items-center">
+  <video src="/tracking-yellow-color.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+</div>
+
+<!-- The limitations of tracking.js in detecting weather with the camera -->
+---
+
+# Identifying various shades of blue
+
+<div class="grid grid-cols-2 gap-2">
+  <div class="flex align-center gap-2">
+    <div class="bg-[#5da8d0] w-min rounded-lg text-white p-1 my-auto"> #5da8d0 </div>
+    <img src="/frames/frame0.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+
+  <div class="flex align-center gap-2">
+    <div class="bg-[#4393be] w-min rounded-lg text-white p-1 my-auto"> #4393be </div>
+    <img src="/frames/frame125.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+
+  <div class="flex align-center gap-2">
+    <div class="bg-[#4184b4] w-min rounded-lg text-white p-1 my-auto"> #4184b4 </div>
+    <img src="/frames/frame250.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+
+  <div class="flex align-center gap-2">
+    <div class="bg-[#286ba4] w-min rounded-lg text-white p-1 my-auto"> #286ba4 </div>
+    <img src="/frames/frame375.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+
+  <div class="flex align-center gap-2">
+    <div class="bg-[#04548d] w-min rounded-lg text-white p-1 my-auto"> #04548d </div>
+    <img src="/frames/frame500.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+
+  <div class="flex align-center gap-2">
+    <div class="bg-[#1b233c] w-min rounded-lg text-white p-1 my-auto"> #1b233c </div>
+    <img src="/frames/frame625.jpg" class="rounded-xl w-64 object-scale-down" controls />
+  </div>
+</div>
+
+---
+
+# Identifying various shades of blue
+
+tracking method use rgb and the difference between red and blue or green and blue, or the distance between source color and the tracked color, and both two method can't track specific color and tell the shade of blue which we need
+
+
+```js{7-9|10}
+tracking.ColorTracker.registerColor('yellow', function(r, g, b) {
+  var threshold = 50,
+    dx = r - 255,
+    dy = g - 255,
+    dz = b - 0;
+
+  if ((r - b) >= threshold && (g - b) >= threshold) {
+    return true;
+  }
+  return dx * dx + dy * dy + dz * dz < 10000;
+});
+```
+
+<!-- The first method is using a threshold value of 50 to check if the difference between the red and blue color values is greater than or equal to the threshold, and if the difference between the green and blue color values is greater than or equal to the threshold. If both of these conditions are true, then the function will return true to indicate that the color is yellow.
+
+The second method is using a "distance" formula to calculate the distance between the given color (r, g, b) and the color white (255, 255, 0). If this distance is less than 10000, then the function will again return true to indicate that the color is yellow.
+ -->
+
+
+<!-- The difficulty of accurately identifying various shades of blue and black using the RGB color space -->
+
+
+---
+layout: two-cols
+---
+
+# Impact of buildings
+
+<!-- The impact of buildings on the screen on the tracking of main colors -->
+
+the buildings on the screen will affect the tracking of main colors, and the color is not smoothly change
+
+
+**The lack of existing solutions for sky detection using browser-based JavaScript implementation**
+
+[![cftang0827/sky-detector - GitHub](https://gh-card.dev/repos/cftang0827/sky-detector.svg?fullname=)](https://github.com/cftang0827/sky-detector)
+
+[![MaybeShewill-CV/sky-detector - GitHub](https://gh-card.dev/repos/MaybeShewill-CV/sky-detector.svg?fullname=)](https://github.com/MaybeShewill-CV/sky-detector)
+
+
+::right::
+
+<div class="w-full h-full flex justify-center items-center">
+  <video src="/impact-building.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+</div>
+
+---
+layout: section
+---
+
+# Solutions
+
+
+---
+layout: two-cols
+---
+
+<div class="opacity-30">
+
+## tracking.js track preset color
+
+
+```mermaid
+graph TD
+    A(View) -->|Get main color| B(Main color)
+    B -->|track preset color| C(Know state when color find)
+```
+
+</div>
+
+::right::
+
+## Sky color detection
+
+```mermaid
+graph TD
+    E(View) -->|Sky part filter| A(Sky View) -->|Get main color intime| B(Sky main color)
+    B -->|set main color to cloud| C(Cloud color)
+```
+
+---
+
+# Sky Part filter
+
+* Use of opencv.js for more advanced image processing instead of simply tracking specific colors,
+
+* Use of image segmentation and sky detection techniques, including the use of a Laplacian filter to extract parts of the image with lower variance than a threshold
+
+* World First Sky Detection Using JavaScript
+
+```js
+const getSkyRegionGradient = (src, mask, h, w) => {
+  let imgGray = new cv.Mat();
+  cv.cvtColor(src, imgGray, cv.COLOR_RGBA2GRAY, 0);
+
+  cv.blur(imgGray, imgGray, kSize);
+  cv.medianBlur(imgGray, imgGray, 5);
+  let lap = new cv.Mat();
+  cv.Laplacian(imgGray, lap, cv.CV_8U, 1, 1, 0, cv.BORDER_DEFAULT);
+  let gradient_mask = new cv.Mat();
+  cv.threshold(lap, gradient_mask, 6, 255, cv.THRESH_BINARY_INV);
+  let M = cv.Mat.ones(9, 3, cv.CV_8U);
+  cv.erode(gradient_mask, mask, M);
+  imgGray.delete();
+  lap.delete();
+  calSkyLine(mask, h, w);
+};
+```
+
+---
+
+# Sky Part filter
+
+the sky part filter will get the sky part of the image
+
+<br/>
+
+<video src="/skyline.mov" class="rounded-xl object-scale-down" autoplay></video>
+
+
+---
+
+# Sky Part filter
+
+the main color of the sky part change smoothly
+
+<video src="/sky-filter-main-color.MP4" class="rounded-xl object-scale-down" autoplay></video>
+
+---
+
+# Get main color realtime
+
+use a class written by `whoiam2007s` to track the main color of the sky part, but change the input image type from canvas image to uint8array
+
+
+[![whoiam2007s/ImgMainColor - GitHub](https://gh-card.dev/repos/whoiam2007s/ImgMainColor.svg?fullname=)](https://github.com/whoiam2007s/ImgMainColor)
+
+```js{1-8|9}
+new ImgMainColor(
+  {
+    imageData: skyView,
+  },
+  function (color) {
+    const { hex } = color
+    currentColor.style.backgroundColor = hex;
+    currentColor.innerHTML = hex;
+    model.attributes['light'].value = `type: ambient; color: ${hex}`;
+  }
+);
+```
+
+
+
+
+
+---
 layout: quote
 ---
 
