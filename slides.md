@@ -239,7 +239,7 @@ layout: two-cols
 ::right::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/cloud_computer.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+  <video src="/cloud_computer.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
 <!--
@@ -374,7 +374,7 @@ layout: two-cols
 ::right::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/early-progress-report-overview.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+  <video src="/early-progress-report-overview.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
 ---
@@ -428,7 +428,7 @@ But what we need
 :: right ::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/tracking-yellow-color.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+  <video src="/tracking-yellow-color.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
 <!-- The limitations of tracking.js in detecting weather with the camera -->
@@ -519,7 +519,7 @@ the buildings on the screen will affect the tracking of main colors, and the col
 ::right::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/impact-building.MP4" class="rounded-xl w-1/2 object-scale-down" controls></video>
+  <video src="/impact-building.mp4" class="rounded-xl w-1/2 object-scale-down" controls></video>
 </div>
 
 ---
@@ -593,7 +593,7 @@ the sky part filter will get the sky part of the image
 
 <br/>
 
-<video src="/skyline.MP4" class="rounded-xl object-scale-down" autoplay loop></video>
+<video src="/skyline.mp4" class="rounded-xl object-scale-down" autoplay loop></video>
 
 
 ---
@@ -602,7 +602,7 @@ the sky part filter will get the sky part of the image
 
 the main color of the sky part change smoothly
 
-<video src="/sky-filter-main-color.MP4" class="rounded-xl object-scale-down" autoplay loop></video>
+<video src="/sky-filter-main-color.mp4" class="rounded-xl object-scale-down" autoplay loop></video>
 
 ---
 
