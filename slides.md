@@ -593,7 +593,7 @@ the sky part filter will get the sky part of the image
 
 <br/>
 
-<video src="/skyline.mov" class="rounded-xl object-scale-down" autoplay></video>
+<video src="/skyline.MP4" class="rounded-xl object-scale-down" autoplay loop></video>
 
 
 ---
@@ -602,7 +602,7 @@ the sky part filter will get the sky part of the image
 
 the main color of the sky part change smoothly
 
-<video src="/sky-filter-main-color.MP4" class="rounded-xl object-scale-down" autoplay></video>
+<video src="/sky-filter-main-color.MP4" class="rounded-xl object-scale-down" autoplay loop></video>
 
 ---
 
