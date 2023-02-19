@@ -5,6 +5,8 @@ drawings:
   persist: false
 layout: intro
 title: Final Project Presentation
+transition: slide-left
+download: true
 ---
 
 # Final Project Presentation
