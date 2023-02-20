@@ -7,6 +7,7 @@ layout: intro
 title: Final Project Presentation
 transition: slide-left
 download: true
+css: unocss
 ---
 
 # Final Project Presentation
@@ -633,59 +634,37 @@ new ImgMainColor(
 layout: section
 ---
 
-# 后续可能遇到的问题和思考
+# Applying AR technology for art exhibition on Mobile devices
 
----
-layout: two-cols
----
+##  Mid-term Progress Report 🏃‍♂️
 
-# Cloud ☁
-
-* 云彩的多角度打光进行拟真, 太阳光和天空环境光
-* 通过AI可以通过天空识别当前时间和太阳角度
-* 如何将标识和主体进行融合
-* ...
-
-::right::
-
-# Animal 🦏
-
-* 动物的声音识别可能需要用到AI技术, 待学习🧑‍💻
-* ...
-
-
----
-layout: section
----
-
-
-# Mid-term Progress Report 🏃‍♂️
-
-
----
-layout: two-cols
----
-# Overview
-
-> successfully implement the sky color detection, main color detection and surrounding volume meter.
-
-* ✅ Implement the main page
-* ✅ Cloud page color detect
-* ✅ Fox model and animation
-* ✅ volume meter
-* ✅ Fox animate when volume meter change
-
-::right::
-
-<div class="w-full h-full flex justify-center items-center">
-  <iframe src="https://cloud.lawted.tech" class="h-full w-2/3 rounded-xl"></iframe>
+<div class="absolute bottom-10">
+  <span class="font-700">
+    Wu Mingze
+  </span>
 </div>
 
 ---
-layout: section
+layout: two-cols
 ---
 
-# Finished work
+# Exhibition Demo
+
+<br/>
+
+<img src="/cloudDemo.png" class="w-100 h-100">
+
+::right::
+
+<br/>
+<br/>
+<br/>
+
+<img src="/foxDemo.png"  class="w-100 h-100 mt-1">
+
+---
+src: ./timeline.md
+---
 
 ---
 layout: two-cols
@@ -693,7 +672,7 @@ layout: two-cols
 
 # Main Page
 
-> main page use the motion sensor to control the object view and click the button to redirect to the page
+> User select the page they want to go to by clicking the button in the main page
 
 * 🏃‍♂️ View by Motion Sensor
 * 🖐️ Scale by Finger Touch
@@ -702,143 +681,95 @@ layout: two-cols
 ::right::
 
 <div class="w-full h-full flex justify-center items-center">
-  <video src="/main-page.mp4" class="rounded-xl w-1/2 object-scale-down" controls autoplay loop></video>
+  <iframe src="https://cloud.lawted.tech" class="h-full w-2/3 rounded-xl"></iframe>
 </div>
 
 
 
 
 ---
-layout: two-cols
----
+
+<div class="grid grid-cols-4 gap-4">
+
+<div class="col-span-3">
 
 # Cloud Page
 
-> Cloud model currently replaced by a box entity, because of the volume effect in `gltf` format has not solved yet
+> Users scan the marker on the ceiling with their mobile phone to observe the cloud, and the cloud will change color according to the color behind the marker
 
-* ☁️ Deploy the Cloud Page
+<br/>
+
+## ✅ Finished
+* ☁️ Deploy the [Cloud Page](https://cloud.lawted.tech/cloud)
 * 🎨 Track the Main Color of the Screen and Change the Color of the Cloud
-* 🖌️ Main Color Detect will Filter Black and White Color
 * ⚙️ Orbit Control the Object and Scale by Finger Touch
 
-::right::
+## 🚧 In Progress
+* <FileIconsVertexshader/> Use shader to implement the cloud effect (volume ray cast effect)
 
-<div class="w-full h-full flex justify-center items-center">
-  <video src="/cloud-page.mp4" class="rounded-xl w-1/2 object-scale-down" controls autoplay loop></video>
+</div>
+
+<div class="col-span-1 h-full flex justify-center items-center">
+  <video src="/cloud-page.mp4" class="rounded-xl object-scale-down" controls autoplay loop></video>
+</div>
+
 </div>
 
 ---
-layout: two-cols
----
+
+<div class="grid grid-cols-4 gap-4">
+
+<div class="col-span-3">
 
 # Fox Page
 
-> Fox model currently has three animation, survey, walk and run.
+> Users can observe the fox by scanning the signs on the ground, and change the fox's actions by talking and shouting.
 
+<br/>
 
-<div class="flex justify-between w-100 mt-10">
+<div class="absolute right-80 top-60 flex">
+<div class="flex flex-col justify-between h-50 mr-1">
   <h3>
-    low
+    HIGH
   </h3>
-  <h2>
+  <h2 style="writing-mode: vertical-rl; transform: rotate(180deg)" >
     Volume
   </h2>
   <h3 >
-    high
+    Low
   </h3>
 </div>
 
-<div class="flex border-light-500 border-2 rounded-lg justify-between my-1 w-min ">
-  <div class="bg-gray-400 rounded-l-md w-30 text-center"> survey </div>
-  <div class="bg-green-400 w-30 text-center"> walk </div>
-  <div class="bg-red-400 rounded-r-md w-40 text-center"> run </div>
+<div class="flex flex-col border-light-500 border-2 rounded-lg justify-between my-1 ">
+
+  <div class="bg-red-400 rounded-t-md h-20 text-center"> run </div>
+  <div class="bg-green-400 h-15 text-center"> walk </div>
+  <div class="bg-gray-400 rounded-b-md h-15 text-center p-1"> survey </div>
+
+
+</div>
 </div>
 
-* 🦊 Deploy the Fox Page
-* 🔊 Volume Meter will Detect the Surrounding
+
+## ✅ Finished
+
+* 🦊 Deploy the [Fox Page](https://cloud.lawted.tech/fox)
+* 🔊 Detect the level of the surrounding environment volume
 * 🎥 Animation will Change when Volume Meter Changes
 * ⚙️ Orbit Control the Object and Scale by Finger Touch
 
-::right::
+## 🚧 In Progress
+* <LogosTensorflow/> Use `tensorflow.js` to detect the voice by human
+* 🎬 Create more animation for the fox
 
-<div class="w-full h-full flex justify-center items-center">
-  <video src="/fox-page.mp4" class="rounded-xl w-1/2 object-scale-down" controls autoplay loop></video>
-</div>
-
----
-
-# Work to do
-
-* use shader to implement the cloud effect (volume ray cast effect)
-  * learn shader and glsl language
-  * implement the cloud effect with shaderMaterial
-
-* use AI to detect the voice and change the animation of the fox
-  * learn AI and tensorflow.js
-  * deploy the AI model to the web
-
----
-layout: two-cols
----
-
-# Problems
-
-```mermaid
-flowchart LR
-    A(Blender) -->|volume effect| B(Volume Model)
-    B -->|No | C(GLTF format Cloud)
-    A --> |Pure mesh| D(Mesh Model)
-    D --> |Yes| C
-```
-
-::right::
-
-<div class="w-full h-full flex justify-center items-center">
-  <video src="/impact-building.mp4" class="rounded-xl w-1/2 object-scale-down" autoplay loop controls></video>
 </div>
 
 
-
-<!-- Blender is a popular 3D modeling software that allows users to create various models, including
-cloud models. However, when it comes to deploying a cloud model on a website, it is important to choose the correct file format.
-One such file format is glTF, which is specifically designed for efficient transmission and loading of 3D scenes and models on the web. Unfortunately, when exporting a cloud model from Blender to glTF format, there may be issues with the volume effect not being correctly represented. Therefore, while it is possible to shape a cloud model in Blender, it may not be currently possible to export it as a glTF file and deploy it on a website without the volume effect issues being addressed first.
- -->
-
----
-layout: two-cols
----
-
-# Solutions
-
-
-use `shaderMaterial` construct a realtime cloud model which use `shader` language `glsl`, but it  can not reflected light now
-
-
-```js
-const vertexShader = /* glsl */ `...`
-const fragmentShader = /* glsl */ `...`
-
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.RawShaderMaterial({
-  glslVersion: THREE.GLSL3,
-  uniforms: {
-    ...
-  },
-  vertexShader,
-  fragmentShader,
-  side: THREE.BackSide,
-  transparent: true,
-});
-const mesh = new THREE.Mesh(geometry, material);
-
-```
-
-::right::
-
-<div class="w-full h-full flex justify-center items-center">
-  <img src="/shader-cloud.jpeg"  class="rounded-xl w-1/2 object-scale-down">
+<div class="col-span-1 h-full flex justify-center items-center">
+  <video src="/fox-page.mp4" class="rounded-xl object-scale-down" controls autoplay loop></video>
 </div>
 
+</div>
 
 
 ---

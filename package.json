@@ -4,7 +4,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open --remote",
-    "export": "slidev export --range 34-43"
+    "export": "slidev export --range 32-38"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@iconify-json/cib": "^1.1.2",
+    "@iconify-json/file-icons": "^1.1.4",
     "@iconify-json/logos": "^1.1.18",
     "@iconify-json/mdi": "^1.1.34",
     "@iconify-json/pajamas": "^1.1.4",
