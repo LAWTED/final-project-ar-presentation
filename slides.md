@@ -3,13 +3,11 @@ theme: apple-basic
 lineNumbers: true
 drawings:
   persist: false
-layout: intro
+layout: section
 title: Final Project Presentation
 transition: slide-left
 download: true
 css: unocss
----
-layout: section
 ---
 
 # Applying AR technology for art exhibition on Mobile devices
