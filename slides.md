@@ -5,6 +5,7 @@ drawings:
   persist: false
 layout: section
 title: Final Project Presentation
+transition: slide-left
 download: true
 css: unocss
 ---
