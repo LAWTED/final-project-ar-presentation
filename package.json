@@ -4,7 +4,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open --remote",
-    "export": "slidev export --range 32-38"
+    "export": "slidev export --range 32-38 --format png"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
