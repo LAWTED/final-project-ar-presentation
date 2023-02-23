@@ -1,3 +1,7 @@
+---
+title: Timeline
+---
+
 # Timeline
 
 
@@ -41,3 +45,7 @@ gantt
     feedback round 4 :e2, 2023-03-16, 15d
 
 ```
+
+<!--
+here is the timeline that I've outlined in the project specification, with the red line indicating the current date. Today, I'll be sharing my progress on several key parts of the project, corresponding to different stages in the timeline.
+-->
