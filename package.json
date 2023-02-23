@@ -7,7 +7,7 @@
     "export": "slidev export --range 32-38 --format png"
   },
   "dependencies": {
-    "@slidev/cli": "0.38.3",
+    "@slidev/cli": "^0.40.3",
     "@slidev/theme-apple-basic": "^0.20.0",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
