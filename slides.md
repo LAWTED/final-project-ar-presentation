@@ -90,7 +90,7 @@ The project is in collaboration with the Beijing Cultural Center and will ultima
 
 <div class="grid grid-cols-3 gap-5">
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
     <LogosFramed class="w-8 h-8"/>
     <span class="text-3xl font-bold">Aframe</span>
@@ -98,7 +98,7 @@ The project is in collaboration with the Beijing Cultural Center and will ultima
   <p> A web framework for building 3D/AR/VR experiences </p>
 </div>
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
     <div class="i-akar-icons-augmented-reality w-8 h-8 bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 "></div>
     <span class="text-3xl font-bold">Ar.js</span>
@@ -106,7 +106,7 @@ The project is in collaboration with the Beijing Cultural Center and will ultima
   <p> A lightweight library for Augmented Reality on the Web </p>
 </div>
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
     <div class=" i-ic-outline-control-camera bg-gradient-to-r from-indigo-300 to-purple-400 w-8 h-8 "></div>
     <span class="text-3xl font-bold" >Tracking.js</span>
@@ -114,7 +114,7 @@ The project is in collaboration with the Beijing Cultural Center and will ultima
   <p> Brings different computer vision algorithms into the browser environment. </p>
 </div>
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
     <SkillIconsThreejsLight class="w-8 h-8"/>
     <span class="text-3xl font-bold" >Three.js</span>
@@ -122,15 +122,15 @@ The project is in collaboration with the Beijing Cultural Center and will ultima
   <p> A JavaScript library used to display animated 3D computer graphics on a Web browser </p>
 </div>
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
-    <LogosBlender class="w-8 h-8"/>
-    <span class="text-3xl font-bold" >Blender</span>
+    <LogosTensorflow class="w-8 h-8"/>
+    <span class="text-3xl font-bold">TensorFlow.js</span>
   </div>
-  <p> A open-source 3D computer graphics software tool creating 3D models </p>
+  <p>A library for machine learning in JavaScript.</p>
 </div>
 
-<div class="bg-zinc-700/50 w-full h-40 rounded-xl p-4">
+<div class="bg-zinc-200/50 dark:bg-zinc-700/50 w-full h-40 rounded-xl p-4">
   <div class="flex gap-4">
     <div class="i-simple-icons-opencv w-8 h-8 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100"> </div>
     <span class="text-3xl font-bold">OpenCV.js</span>
