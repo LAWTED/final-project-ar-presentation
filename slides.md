@@ -397,11 +397,40 @@ In conclusion, I am very excited about the progress we have made so far with app
 
 ---
 
-# cloud.lawted.tech
+# Demo Time
 
-<div class="w-full h-full bg-blue-200 flex justify-center items-center">
-  <img src="hiro.jpeg" class="w-1/4" />
+Use wechat to scan the QR code to visit the demo
+
+<img src="/QRcode.png" class="w-1/4" />
+
+---
+layout: none
+---
+
+
+<div class="w-full h-full flex justify-center items-center bg-gradient-to-r from-blue-400 via-red-500 to-green-500 background-animate">
+  <img src="hiro.jpg" class="w-1/4" />
 </div>
+
+<style>
+  .background-animate {
+    background-size: 400%;
+
+    -webkit-animation: changColor 15s ease infinite;
+    -moz-animation: changColor 15s ease infinite;
+    animation: changColor 15s ease infinite;
+  }
+
+  @keyframes changColor {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+</style>
 ---
 layout: quote
 ---
