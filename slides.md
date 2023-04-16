@@ -407,9 +407,8 @@ Use wechat to scan the QR code to visit the demo
 layout: none
 ---
 
-
-<div class="w-full h-full flex justify-center items-center bg-gradient-to-r from-blue-400 via-red-500 to-green-500 background-animate">
-  <img src="hiro.jpg" class="w-1/4" />
+<div class="w-full h-full bg-white flex justify-center items-center ">
+  <img src="hiro.jpg" class="w-1/8" />
 </div>
 
 <style>
@@ -431,6 +430,8 @@ layout: none
     }
   }
 </style>
+
+
 ---
 layout: quote
 ---
