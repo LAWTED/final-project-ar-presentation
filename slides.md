@@ -406,7 +406,7 @@ Use wechat to scan the QR code to visit the demo
 layout: none
 ---
 
-<div class="w-full h-full bg-white flex justify-center items-center ">
+<div class="w-full h-full background-animate bg-gradient-to-r from-red-400 via-blue-400 to-yellow-400 flex justify-center items-center ">
   <img src="/hiro.jpg" class="w-1/8" />
 </div>
 
