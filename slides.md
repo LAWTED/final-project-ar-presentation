@@ -6,7 +6,6 @@ drawings:
 layout: section
 title: Final Project Presentation
 transition: fade-out
-download: true
 css: unocss
 ---
 
@@ -408,7 +407,7 @@ layout: none
 ---
 
 <div class="w-full h-full bg-white flex justify-center items-center ">
-  <img src="hiro.jpg" class="w-1/8" />
+  <img src="/hiro.jpg" class="w-1/8" />
 </div>
 
 <style>
